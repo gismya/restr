@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/_header') %>
+
+  <body class="bg-gray-100">
+    <main class="container mx-auto p-4 w-11/12 max-w-sm">
+      <h1 class="text-3xl font-bold mb-5">Search Options</h1>
+
+      <section class="bg-white p-6 rounded shadow">
+        <form>
+          <fieldset>
+            <legend class="sr-only">Search options</legend>
+            <label for="radius" class="block mb-2">Radius:</label>
+            <input
+              id="radius"
+              type="range"
+              min="400"
+              max="40000"
+              step="100"
+              data-variable="radius"
+              data-radius-slider
+            />
+            <span data-radius-value>400 meters</span>
+
+            <div class="mt-4">
+              <fieldset>
+                <legend class="block mb-2">Price:</legend>
+                <div class="flex space-x-2">
+                  <label class="inline-flex items-center">
+                    <input
+                      checked
+                      type="checkbox"
+                      data-variable="price"
+                      value="1"
+                    />
+                    <span class="ml-2"
+                      >$<span class="sr-only">1 out of 4</span></span
+                    >
+                  </label>
+                  <label class="inline-flex items-center">
+                    <input
+                      checked
+                      type="checkbox"
+                      data-variable="price"
+                      value="2"
+                    />
+                    <span class="ml-2"
+                      >$$<span class="sr-only">2 out of 4</span></span
+                    >
+                  </label>
+                  <label class="inline-flex items-center">
+                    <input
+                      checked
+                      type="checkbox"
+                      data-variable="price"
+                      value="3"
+                    />
+                    <span class="ml-2"
+                      >$$$<span class="sr-only">3 out of 4</span></span
+                    >
+                  </label>
+                  <label class="inline-flex items-center">
+                    <input
+                      checked
+                      type="checkbox"
+                      data-variable="price"
+                      value="4"
+                    />
+                    <span class="ml-2"
+                      >$$$$<span class="sr-only">4 out of 4</span></span
+                    >
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="mt-4">
+              <label class="inline-flex items-center">
+                <input type="checkbox" data-variable="open-now" />
+                <span class="ml-2">Open now</span>
+              </label>
+            </div>
+
+            <button
+              data-submit-button
+              class="mt-6 bg-blue-500 text-white py-2 px-4 rounded"
+              type="button"
+            >
+              Submit
+            </button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <script src="/js/options.js"></script>
+  </body>
+</html>
